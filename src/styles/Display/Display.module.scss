@@ -1,0 +1,14 @@
+.Display {
+    width: 60em;
+    margin-left: 2em;
+}
+
+.posts_container {
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+}
+
+.section_header {
+    width: 100%;
+}

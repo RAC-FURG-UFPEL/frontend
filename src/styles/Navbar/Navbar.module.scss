@@ -1,0 +1,101 @@
+/* VARIABLES */
+$dark-blue: #070617;
+
+.topbar {
+    background: $dark-blue;
+    font-size: 11pt;
+    width: auto;
+    display: flex;
+    flex-flow:row wrap;
+}
+
+.logo {
+    padding: 1em 4em 0 4em;
+}
+
+.logo img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 400px;
+    max-height: 7em;
+}
+
+.partners {
+    display: flex;
+    margin: 0em 4em 0 auto;
+    align-items: center;
+}
+
+.partners img {
+    max-height: 3.5em;
+    width: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin: 1em 1em;
+}
+
+.partners img:nth-child(2) {
+    max-height: 2.5em;
+    width: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin: 1em 1em;
+}
+
+/* Navbar */
+
+.Navbar {
+    padding: 1vh;
+}
+
+.Navbar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.Navbar a:hover {
+    text-decoration: none;
+    color: rgb(179, 179, 179);
+}
+
+.Navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.Navbar ul li {
+    padding: 0 0.8em;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the Navbar (.icon) */
+@media screen and (max-width: 600px) {
+    .Navbar li:not(:first-child) {
+        display: none;
+    }
+
+    .Navbar li.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the Navbar with JavaScript when the user clicks on the icon. This class makes the Navbar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .Navbar_responsive {
+        position: relative;
+    }
+
+    .Navbar_responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .Navbar_responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

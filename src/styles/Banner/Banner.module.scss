@@ -1,0 +1,98 @@
+/* BEGIN CARD DESIGN */
+.hero {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    min-width: 20em;
+    height: 200px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+    margin: 1em 1em;
+}
+
+.hero_profile_img {
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+    position: center;
+}
+
+.hero_description_bk {
+    background-image: linear-gradient(0deg, #a04c4c, #86011b);
+    opacity: 0;
+    border-radius: 30px;
+    position: absolute;
+    top: -55%;
+    left: -405px;
+    height: 65%;
+    width: 150%;
+    transform: skew(19deg, -15deg);
+}
+
+.hero_logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 5%;
+    left: 30px;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero_logo img {
+    height: 100%;
+}
+
+.hero_description {
+    position: absolute;
+    color: #fff;
+    font-weight: 900;
+    left: 8rem;
+    bottom: 0.5rem;
+    max-width: 25em;
+    text-align: justify;
+}
+
+.hero_btn {
+    position: absolute;
+    color: #fff;
+    right: 30px;
+    bottom: 10%;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+}
+
+.hero_btn a {
+    color: #fff;
+}
+
+.hero_date {
+    position: absolute;
+    color: #fff;
+    right: 30px;
+    top: 0;
+}
+
+/* END CARD DESIGN */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-color: #eee;
+    min-height: 100vh;
+}
+
+.btn i:before {
+    width: 14px;
+    height: 14px;
+    position: fixed;
+    color: #fff;
+    background: #0077B5;
+    padding: 10px;
+    border-radius: 50%;
+    top: 5px;
+    right: 5px;
+}
