@@ -6,24 +6,59 @@ $dark-blue: #070617;
     font-size: 11pt;
     width: auto;
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
 }
 
 .logo {
     padding: 1em 4em 0 4em;
+    height: 5em;
+    display: flex;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 .logo img {
     vertical-align: middle;
     border-style: none;
-    max-width: 400px;
-    max-height: 7em;
+    height: 8em;
+}
+
+.logoname {
+
+    margin: 0 2rem auto 0;
+
+    h1 {
+        color: #fff;
+        margin: auto;
+        font-weight: 400;
+        font-size: 4rem;
+    }
+
+    h2 {
+        color: #fff;
+        margin: auto;
+        font-weight: normal;
+        font-size: 0.4rem;
+        visibility: hidden;
+    }
 }
 
 .partners {
     display: flex;
     margin: 0em 4em 0 auto;
     align-items: center;
+}
+
+.partners>* {
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 0.6;
+    }
 }
 
 .partners img {
@@ -63,10 +98,12 @@ $dark-blue: #070617;
     list-style: none;
     display: flex;
     align-items: center;
+    width: 100vh;
 }
 
 .Navbar ul li {
     padding: 0 0.8em;
+    margin: auto;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the Navbar (.icon) */

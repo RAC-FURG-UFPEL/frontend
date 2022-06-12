@@ -1,0 +1,83 @@
+/* VARIABLES */
+$dark-blue: #07061779;
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section {
+    margin: 2rem;
+}
+
+.StaffCard img {
+    object-fit: cover;
+    transform-origin: center;
+    transition: opacity 0.5s linear;
+    border-radius: 2rem;
+}
+
+.cropped_image {
+    width: 14rem;
+    height: 20rem;
+}
+
+.person {
+    height: 20rem;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    .info {
+        width: 13rem;
+        padding: 0.5rem;
+
+        transform: translateY(-7rem);
+
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s 0.5s, opacity 0.5s linear;
+
+        color: #fff;
+        background: $dark-blue;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0 0.2rem 0.2rem 0.2rem;
+    }
+}
+
+.container {
+    max-width: 100%;
+    margin: 2em auto;
+
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.container:hover img {
+    transition: opacity 0.4s linear;
+    opacity: 0.3;
+}
+
+.container .person:hover {
+
+    .info {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.5s linear;
+    }
+
+    img {
+        transform: perspective(800px) rotateY(0deg);
+        opacity: 1;
+    }
+
+}
