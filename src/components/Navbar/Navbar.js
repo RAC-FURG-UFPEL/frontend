@@ -25,7 +25,7 @@ function Navbar() {
                     <img src={require('../../images/marca-branco-furg.png')} alt='Reppets' />
                 </div>
             </div>
-            <div className={styles.topbar}>
+            <div className={styles.topbar_secondary}>
                 <div className={styles.Navbar} id="myTopnav">
                     <ul>
                         <li>

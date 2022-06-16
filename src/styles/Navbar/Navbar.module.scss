@@ -7,10 +7,19 @@ $dark-blue: #070617;
     width: auto;
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
+}
+
+.topbar_secondary {
+    font-size: 11pt;
+    width: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
 .logo {
-    padding: 1em 4em 0 4em;
+    padding: 0em 4em 1em 4em;
     height: 5em;
     display: flex;
     overflow: hidden;
@@ -25,15 +34,19 @@ $dark-blue: #070617;
     vertical-align: middle;
     border-style: none;
     height: 8em;
+
+    visibility: hidden;
 }
 
 .logoname {
-
+    display: flex;
     margin: 0 2rem auto 0;
+    padding: 0;
 
     h1 {
         color: #fff;
-        margin: auto;
+        margin: auto 0;
+        padding: 0;
         font-weight: 400;
         font-size: 4rem;
     }
@@ -41,9 +54,10 @@ $dark-blue: #070617;
     h2 {
         color: #fff;
         margin: auto;
+        width: 15rem;
         font-weight: normal;
-        font-size: 0.4rem;
-        visibility: hidden;
+        font-size: 1.2rem;
+        visibility: visible;
     }
 }
 
@@ -85,7 +99,7 @@ $dark-blue: #070617;
 
 .Navbar a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: $dark-blue;
     transition: 0.5s;
 }
 
@@ -98,11 +112,10 @@ $dark-blue: #070617;
     list-style: none;
     display: flex;
     align-items: center;
-    width: 100vh;
 }
 
 .Navbar ul li {
-    padding: 0 0.8em;
+    padding: 0 1.0em;
     margin: auto;
 }
 

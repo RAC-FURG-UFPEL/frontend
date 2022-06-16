@@ -5,26 +5,43 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Team from './pages/AboutUs/Team'
+import Index from './pages/Index/Index';
+
+import { AuthProvider } from './contexts/auth';
+import useAuth from './hooks/useAuth';
+import Login from './pages/User/Login'
+import Register from './pages/User/Register';
+import Admin from './pages/Admin/Admin'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
+
+  const Private = ({ Item }) => {
+    const signed = useAuth()
+
+    return signed > 0 ? <Item /> : <Login />
+  }
+
   return (
     <div className="App">
 
-      <Router>
+      <AuthProvider>
+        <Router>
 
-        <Navbar />
+          <Routes>
 
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/sobre-nos" element={<AboutUs/>} />
-          <Route path="/sobre-nos/equipe" element={<Team/>} />
-        </Routes>
+            <Route path="/*" element={<Index />} />
 
-        <Footer />
+            <Route path="/entrar" element={<Login />} />
+            <Route path="/cadastrar" element={<Register />} />
 
-      </Router>
+            <Route path="/admin" element={<Private Item={Admin} />} />
+          </Routes>
+
+        </Router>
+      </AuthProvider>
+
     </div>
 
   );

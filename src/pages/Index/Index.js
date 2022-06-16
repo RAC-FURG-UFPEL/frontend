@@ -3,6 +3,7 @@ import Display from '../../components/Display/Display';
 import Caroussel from '../../components/Caroussel/Caroussel';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Home from '../Home/Home';
 
 import Login from '../User/Login';
 import Admin from '../Admin/Admin';
@@ -13,7 +14,7 @@ import useAuth from '../../hooks/useAuth';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function Home() {
+function Index() {
 
     const Private = ({ Item }) => {
         const signed = useAuth()
@@ -23,12 +24,17 @@ function Home() {
 
     return (
         <div>
-            <Container>
-                <Caroussel />
-                <Display />
-            </Container>
+            <Navbar />
+
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route path="/sobre-nos" element={<AboutUs />} />
+                <Route path="/sobre-nos/equipe" element={<Team />} />
+            </Routes>
+
+            <Footer />
         </div>
     )
 }
 
-export default Home
+export default Index

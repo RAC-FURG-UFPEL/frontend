@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 
 import Card from '../Card/Card';
-import Banner from '../Banner/Banner';
 import styles from '../../styles/Display/Display.module.scss'
 
 function Display() {
@@ -25,10 +24,6 @@ function Display() {
     return (
 
         <div className={styles.Display}>
-
-            <div className={styles.section_header}>
-                <Banner />
-            </div>
 
             <div className={styles.posts_container}>
                 {posts.map((post) => (
