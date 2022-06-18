@@ -8,6 +8,8 @@ $dark-blue: #070617;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+
+    overflow: hidden;
 }
 
 .topbar_secondary {
@@ -16,6 +18,8 @@ $dark-blue: #070617;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+
+    overflow: hidden;
 }
 
 .logo {

@@ -158,12 +158,44 @@ $base-font-family-fallback: sans-serif;
             &:hover {
                 opacity: 0.7;
             }
-        }
 
-        span {
-            
+            &:disabled {
+                opacity: 0.2;
+            }
         }
 
     }
 
+}
+
+.offscreen {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+}
+
+.instructions {
+    background-color: rgb(36, 36, 36);
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.info_circle {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: rgb(62, 160, 62);
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: rgb(182, 0, 0);
+    margin-left: 0.25rem;
 }

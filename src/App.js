@@ -13,15 +13,11 @@ import Login from './pages/User/Login'
 import Register from './pages/User/Register';
 import Admin from './pages/Admin/Admin'
 
+import NewArticle from './pages/Articles/NewArticle';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
-
-  const Private = ({ Item }) => {
-    const signed = useAuth()
-
-    return signed > 0 ? <Item /> : <Login />
-  }
 
   return (
     <div className="App">
@@ -32,11 +28,11 @@ function App() {
           <Routes>
 
             <Route path="/*" element={<Index />} />
+            <Route path="/admin/*" element={<Admin />} />
 
             <Route path="/entrar" element={<Login />} />
             <Route path="/cadastrar" element={<Register />} />
-
-            <Route path="/admin" element={<Private Item={Admin} />} />
+        
           </Routes>
 
         </Router>

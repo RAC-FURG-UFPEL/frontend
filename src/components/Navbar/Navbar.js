@@ -32,16 +32,16 @@ function Navbar() {
                             <Link to="/">INÍCIO</Link>
                         </li>
                         <li>
-                            <Link to="/">PUBLICAÇÕES</Link>
+                            <Link to="/publicacoes">PUBLICAÇÕES</Link>
                         </li>
                         <li>
-                            <Link to="/">PALESTRAS</Link>
+                            <Link to="/palestras">PALESTRAS</Link>
                         </li>
                         <li>
                             <Link to="/sobre-nos">SOBRE NÓS</Link>
                         </li>
                         <li>
-                            <Link to="/">CONTATO</Link>
+                            <Link to="/contato">CONTATO</Link>
                         </li>
                     </ul>
                 </div>

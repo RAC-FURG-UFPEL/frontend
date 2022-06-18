@@ -4,15 +4,17 @@ import Caroussel from '../../components/Caroussel/Caroussel';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Home from '../Home/Home';
+import NewArticle from '../Articles/NewArticle';
 
 import Login from '../User/Login';
 import Admin from '../Admin/Admin';
 import AboutUs from '../AboutUs/AboutUs';
 import Team from '../AboutUs/Team'
+import Articles from '../Articles/Articles';
 
 import useAuth from '../../hooks/useAuth';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 function Index() {
 
@@ -28,6 +30,7 @@ function Index() {
 
             <Routes>
                 <Route exact path="/" element={<Home />} />
+                <Route path="/publicacoes" element={<Articles />} />
                 <Route path="/sobre-nos" element={<AboutUs />} />
                 <Route path="/sobre-nos/equipe" element={<Team />} />
             </Routes>
