@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Fragment, useEffect, useState } from 'react';
 
+import styles from '../../styles/Display/Display.module.scss';
 import Card from '../Card/Card';
-import styles from '../../styles/Display/Display.module.scss'
 
 import Api from '../../api/Api';
-import axios from 'axios';
 
 function Display() {
 
@@ -26,17 +24,15 @@ function Display() {
 
             <div className={styles.posts_container}>
                 {posts.map((post) => (
-                    <>
-                        <Link to='/publicacoes/'>
+                    <Fragment key={post._id}>
                             <Card
                                 key={post._id}
-                                img="https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg"
+                                img="https://cdn.create.vista.com/api/media/medium/179826100/stock-photo-background-made-pastel-colors-papers?token="
                                 title={post.title}
                                 author={post.author.firstName}
                                 description={post.description}
                             />
-                        </Link>
-                    </>
+                    </Fragment>
                 ))}
             </div>
 

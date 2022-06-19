@@ -1,26 +1,36 @@
-import { Routes, Route } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 
 import NewArticle from "../Articles/NewArticle"
 import Dashboard from "./Dashboard"
 
-import useAuth from "../../hooks/useAuth"
-import Login from "../User/Login"
+import RequireAuth from "../../components/Private/RequireAuth"
 
 function Admin() {
 
-    const Private = ({ children }) => {
-        const signed = useAuth()
-
-        return signed > 0 ? children : <Login />
-    }
-
     return (
-        <Private>
-            <Routes>
+        <Routes>
+            {/* Speakers */}
+            <Route element={<RequireAuth allowedRole={[2]} />}>
+
+            </Route>
+
+            {/* Regular Admins */}
+            <Route element={<RequireAuth allowedRole={[11]} />}>
                 <Route exact path="/" element={<Dashboard />} />
                 <Route path="/nova-publicacao" element={<NewArticle />} />
-            </Routes>
-        </Private>
+            </Route>
+
+            {/* Senior Admins */}
+            <Route element={<RequireAuth allowedRole={[12]} />}>
+
+            </Route>
+
+            {/* System Admins */}
+            <Route element={<RequireAuth allowedRole={[13]} />}>
+
+            </Route>
+
+        </Routes >
     )
 }
 

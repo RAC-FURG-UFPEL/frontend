@@ -1,28 +1,17 @@
-import Container from '../../components/Container/Container';
-import Display from '../../components/Display/Display';
-import Caroussel from '../../components/Caroussel/Caroussel';
-import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
+import Navbar from '../../components/Navbar/Navbar';
 import Home from '../Home/Home';
-import NewArticle from '../Articles/NewArticle';
 
-import Login from '../User/Login';
-import Admin from '../Admin/Admin';
 import AboutUs from '../AboutUs/AboutUs';
-import Team from '../AboutUs/Team'
+import Team from '../AboutUs/Team';
 import Articles from '../Articles/Articles';
+import Unauthorized from '../Default/Unauthorized';
+import NotFound from '../Default/NotFound';
 
-import useAuth from '../../hooks/useAuth';
 
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 function Index() {
-
-    const Private = ({ Item }) => {
-        const signed = useAuth()
-
-        return signed > 0 ? <Item /> : <Login />
-    }
 
     return (
         <div>
@@ -33,6 +22,10 @@ function Index() {
                 <Route path="/publicacoes" element={<Articles />} />
                 <Route path="/sobre-nos" element={<AboutUs />} />
                 <Route path="/sobre-nos/equipe" element={<Team />} />
+
+                {/* Default Pages */}
+                <Route path="/unauthorized" element={<Unauthorized />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
 
             <Footer />

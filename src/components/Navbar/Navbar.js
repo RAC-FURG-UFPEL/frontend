@@ -3,6 +3,7 @@ import styles from '../../styles/Navbar/Navbar.module.scss'
 import { Link } from 'react-router-dom'
 
 import SearchBar from '../SearchBar/SearchBar'
+import User from '../User/User'
 
 function Navbar() {
 
@@ -46,6 +47,7 @@ function Navbar() {
                     </ul>
                 </div>
                 <SearchBar />
+                <User />
             </div>
         </>
     )

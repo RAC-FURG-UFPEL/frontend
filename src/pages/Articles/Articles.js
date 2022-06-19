@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 import Card from '../../components/Card/Card';
@@ -23,15 +23,18 @@ function Articles() {
 
         <div className={styles.container}>
 
+            <div>
+                <Link to="/admin/nova-publicacao">Publicar</Link>
+            </div>
+
             <div className={styles.wrapper}>
                 {posts.map((post) => (
-                    <>
-                        <Link to='/'>
+                    <Fragment key={post._id}>
                             <div className={styles.article}>
                                 <Card
                                     display='false'
                                     key={post._id}
-                                    img="https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg"
+                                    img="https://cdn.create.vista.com/api/media/medium/179826100/stock-photo-background-made-pastel-colors-papers?token="
                                     title={post.title}
                                     author={post.author.firstName}
                                     description={post.description}
@@ -43,8 +46,7 @@ function Articles() {
                                     <p>{post.content}</p>
                                 </div>
                             </div>
-                        </Link>
-                    </>
+                    </Fragment>
                 ))}
             </div>
 

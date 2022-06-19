@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { FaCheck, FaInfoCircle, FaTimes } from "react-icons/fa";
 
-import Api from '../../api/Api'
+import Api from '../../api/Api';
 
 import styles from '../../styles/Login/Login.module.scss';
 
@@ -78,13 +78,13 @@ const Register = () => {
                         firstName: "Jane",
                         lastName: "Doe",
                         birthDate: "2022-05-28T21:56:49.906Z",
-                        cpf: "48415558851",
+                        cpf: "484155582851",
                         title: "Graduando",
                         university: "UFPel"
                     }),
                 {
-                    headers: { 'Content-Type': 'application/json' }/*,
-                    withCredentials: true*/
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
                 }
             )
             console.log(response.data)
@@ -112,7 +112,7 @@ const Register = () => {
                 <div className={styles.login_bg}>
                     <div className={styles.form_fields}>
 
-                        <div className={`${styles.grid} ${styles.align__item}`}>
+                        <section className={`${styles.grid} ${styles.align__item}`}>
 
                             <p ref={errRef} className={errMsg ? `${styles.errmsg}` : `${styles.offscreen}`} aria-live="assertive">{errMsg}</p>
 
@@ -122,7 +122,7 @@ const Register = () => {
                                 <form onSubmit={handleSubmit} className={styles.form}>
                                     <div className={styles.form__field}>
                                         <label htmlFor="user">
-                                            Usuário:
+                                            Email:
                                             <span className={validName ? `${styles.valid}` : `${styles.hide}`}>
                                                 <FaCheck />
                                             </span>
@@ -214,7 +214,7 @@ const Register = () => {
 
                                 <Link to="/"><span>Início</span></Link>
                             </div>
-                        </div>
+                        </section>
 
                     </div>
                 </div>

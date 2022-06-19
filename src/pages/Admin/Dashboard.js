@@ -1,6 +1,6 @@
 function Dashboard() {
     return (
-        Dashboard
+        <h1>Admin Dashboard</h1>
     )
 }
 

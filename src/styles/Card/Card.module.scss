@@ -3,7 +3,7 @@
 $regal-blue: #034378;
 $san-juan: #2d4e68;
 $bermuda: #77d7b9;
-$white: #fff;
+$white: rgb(0, 0, 0);
 $black: #000;
 $red: #c41818;
 $open-sans: 'Open Sans',
@@ -174,7 +174,7 @@ h1 {
         transition: 0.5s;
 
         &:hover {
-            text-shadow: 2px 2px $black;
+            text-shadow: 2px 2px #b9b9b9;
         }
     }
 

@@ -1,20 +1,21 @@
 import styles from '../../styles/User/User.module.scss'
 
+import AuthContext from '../../contexts/auth'
 import useAuth from '../../hooks/useAuth'
 
 function User() {
 
-    const Logged = () => {
-        const signed = useAuth()
+    const { auth } = useAuth(AuthContext)
 
-        return signed > 0 ? children : <Login />
-    }
-
-    return(
+    return (
         <>
             <div className={styles.User_card}>
                 <img className={styles.picture} />
-                <h3>Bem vindo, {name}!</h3>
+                <h3>Bem vindo, {
+                    auth?.data?.firstName
+                        ? auth.data.firstName
+                        : "visitante"
+                }!</h3>
             </div>
         </>
     )

@@ -7,7 +7,7 @@ function Caroussel() {
                 <section className={styles.carousel} aria-label="Gallery">
                     <ol className={styles.carousel__viewport}>
                         <li id="carousel__slide1"
-                            tabindex="0"
+                            tabIndex="0"
                             className={styles.carousel__slide}>
                             <div className={styles.carousel__snapper}>
                                 <a href="#carousel__slide4"
@@ -17,7 +17,7 @@ function Caroussel() {
                             </div>
                         </li>
                         <li id="carousel__slide2"
-                            tabindex="0"
+                            tabIndex="0"
                             className={styles.carousel__slide}>
                             <div className={styles.carousel__snapper}></div>
                             <a href="#carousel__slide1"
@@ -26,7 +26,7 @@ function Caroussel() {
                                 className={styles.carousel__next}>Go to next slide</a>
                         </li>
                         <li id="carousel__slide3"
-                            tabindex="0"
+                            tabIndex="0"
                             className={styles.carousel__slide}>
                             <div className={styles.carousel__snapper}></div>
                             <a href="#carousel__slide2"
@@ -35,7 +35,7 @@ function Caroussel() {
                                 className={styles.carousel__next}>Go to next slide</a>
                         </li>
                         <li id="carousel__slide4"
-                            tabindex="0"
+                            tabIndex="0"
                             className={styles.carousel__slide}>
                             <div className={styles.carousel__snapper}></div>
                             <a href="#carousel__slide3"
