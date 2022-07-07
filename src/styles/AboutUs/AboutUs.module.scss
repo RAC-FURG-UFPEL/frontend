@@ -1,0 +1,31 @@
+.section {
+    margin: 3rem auto;
+    max-width: 50rem;
+
+    display: flex;
+    text-align: justify;
+}
+
+.text {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    width: 50%;
+    margin: auto 1rem;
+
+
+    .float_right {
+        float: right;
+        height: auto;
+        width: 100%;
+    }
+
+    .float_left {
+        float: left;
+        height: auto;
+        width: 100%;
+    }
+}
+
