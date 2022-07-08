@@ -48,18 +48,6 @@ const Register = () => {
     }, [])
 
     useEffect(() => {
-        nameRef.current.focus()
-    }, [])
-
-    useEffect(() => {
-        lnameRef.current.focus()
-    }, [])
-
-    useEffect(() => {
-        cpfRef.current.focus()
-    }, [])
-
-    useEffect(() => {
         const result = USER_REGEX.test(user)
         console.log(result)
         console.log(user)
