@@ -14,11 +14,23 @@ const REGISTER_URL = '/auth/register'
 const Register = () => {
 
     const userRef = useRef()
+    const nameRef = useRef()
+    const lnameRef = useRef()
+    const cpfRef = useRef()
     const errRef = useRef()
 
     const [user, setUser] = useState('')
     const [validName, setValidName] = useState(false)
     const [userFocus, setUserFocus] = useState(false)
+
+    const [name, setName] = useState('')
+    const [nameFocus, setNameFocus] = useState(false)
+
+    const [lname, setLname] = useState('')
+    const [lnameFocus, setLnameFocus] = useState(false)
+
+    const [cpf, setCpf] = useState('')
+    const [cpfFocus, setCpfFocus] = useState(false)
 
     const [pwd, setPwd] = useState('')
     const [validPwd, setValidPwd] = useState(false)
@@ -36,11 +48,35 @@ const Register = () => {
     }, [])
 
     useEffect(() => {
+        nameRef.current.focus()
+    }, [])
+
+    useEffect(() => {
+        lnameRef.current.focus()
+    }, [])
+
+    useEffect(() => {
+        cpfRef.current.focus()
+    }, [])
+
+    useEffect(() => {
         const result = USER_REGEX.test(user)
         console.log(result)
         console.log(user)
         setValidName(result)
     }, [user])
+
+    useEffect(() => {
+        console.log(name)
+    }, [name])
+
+    useEffect(() => {
+        console.log(lname)
+    }, [lname])
+
+    useEffect(() => {
+        console.log(cpf)
+    }, [cpf])
 
     useEffect(() => {
         const result = PWD_REGEX.test(pwd)
@@ -68,17 +104,19 @@ const Register = () => {
 
         try {
 
+            console.log("CARALHO", name, lname, cpf)
+
             const response = await Api.post(REGISTER_URL,
                 JSON.stringify(
                     {
                         name: "John Doe",
                         email: user,
                         password: pwd,
+                        firstName: name,
+                        lastName: lname,
+                        cpf: cpf,
 
-                        firstName: "Jane",
-                        lastName: "Doe",
                         birthDate: "2022-05-28T21:56:49.906Z",
-                        cpf: "4841555828551",
                         title: "Graduando",
                         university: "UFPel"
                     }),
@@ -149,6 +187,61 @@ const Register = () => {
                                             Insira um email válido!
                                         </p>
                                     </div>
+
+                                    <div className={styles.form__field}>
+                                        <label htmlFor="name">
+                                            Primeiro Nome:
+                                        </label>
+                                        <input
+                                            placeholder="Primeiro Nome"
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            ref={nameRef}
+                                            autoComplete="off"
+                                            onChange={(e) => setName(e.target.value)}
+                                            required
+                                            onFocus={() => setNameFocus(true)}
+                                            onBlur={() => setNameFocus(false)}
+                                        />
+                                    </div>
+
+                                    <div className={styles.form__field}>
+                                        <label htmlFor="lname">
+                                            Sobrenome:
+                                        </label>
+                                        <input
+                                            placeholder="Sobrenome"
+                                            type="text"
+                                            id="lname"
+                                            name="lname"
+                                            ref={lnameRef}
+                                            autoComplete="off"
+                                            onChange={(e) => setLname(e.target.value)}
+                                            required
+                                            onFocus={() => setLnameFocus(true)}
+                                            onBlur={() => setLnameFocus(false)}
+                                        />
+                                    </div>
+
+                                    <div className={styles.form__field}>
+                                        <label htmlFor="cpf">
+                                            CPF:
+                                        </label>
+                                        <input
+                                            placeholder="CPF"
+                                            type="text"
+                                            id="cpf"
+                                            name="cpf"
+                                            ref={cpfRef}
+                                            autoComplete="off"
+                                            onChange={(e) => setCpf(e.target.value)}
+                                            required
+                                            onFocus={() => setCpfFocus(true)}
+                                            onBlur={() => setCpfFocus(false)}
+                                        />
+                                    </div>
+
                                     <div className={styles.form__field}>
                                         <label htmlFor="password">
                                             Senha:

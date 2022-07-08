@@ -67,6 +67,7 @@ $base-font-family-fallback: sans-serif;
             padding: .5rem 1rem;
 
             &[type="email"],
+            &[type="text"],
             &[type="password"] {
                 width: 100%;
             }
