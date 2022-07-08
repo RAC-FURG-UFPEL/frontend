@@ -16,17 +16,30 @@
     position: relative;
     display: flex;
     margin-bottom: 1rem;
-    width: 90vw;
+    width: 65vw;
 
     .body {
-        text-align: center;
-        background-color: beige;
-        width: 100%;
+        text-align: justify;
+        width: 60%;
 
         span {
             position: absolute;
             bottom: 0.5rem;
             right: 0.5rem;
+        }
+    }
+}
+
+.admin_buttons {
+
+    button {
+        margin: 0 4rem 2rem 0;
+        float:right;
+
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
         }
     }
 }

@@ -5,9 +5,9 @@ import Home from '../Home/Home';
 import AboutUs from '../AboutUs/AboutUs';
 import Team from '../AboutUs/Team';
 import Articles from '../Articles/Articles';
+import Article from '../Articles/Article';
 import Unauthorized from '../Default/Unauthorized';
 import NotFound from '../Default/NotFound';
-
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -19,9 +19,14 @@ function Index() {
 
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route path="/publicacoes" element={<Articles />} />
                 <Route path="/sobre-nos" element={<AboutUs />} />
                 <Route path="/sobre-nos/equipe" element={<Team />} />
+
+                <Route path="/publicacoes" element={<Articles />} />
+                <Route
+                    path="/publicacoes/:url_title"
+                    element={<Article />}
+                />
 
                 {/* Default Pages */}
                 <Route path="/unauthorized" element={<Unauthorized />} />

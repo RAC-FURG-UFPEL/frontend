@@ -1,4 +1,5 @@
 import styles from '../../styles/Articles/NewArticle.module.scss'
+import buttons from '../../styles/Buttons/Buttons.module.scss'
 
 import Footer from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
@@ -30,9 +31,9 @@ function NewArticle() {
                         <Editor className={styles.form__input} toolbarOnFocus placeholder="Comece a escrever a sua publicação clicando aqui!" />
                     </div>
                     <div className={styles.field_editor}>
-                        <button className={styles.button_border}>Visualizar Prévia</button>
-                        <button className={styles.button_border}>Salvar Rascunho</button>
-                        <button className={styles.button_principal}>Publicar</button>
+                        <button className={buttons.button_border}>Visualizar Prévia</button>
+                        <button className={buttons.button_border}>Salvar Rascunho</button>
+                        <button className={buttons.button_principal}>Publicar</button>
                     </div>
                 </div>
             </div>

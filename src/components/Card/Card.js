@@ -1,6 +1,8 @@
 import styles from '../../styles/Card/Card.module.scss'
 import { MdFavoriteBorder, MdBookmarkBorder, MdOutlineModeComment } from "react-icons/md";
 
+import { Link } from 'react-router-dom';
+
 function Card(props) {
     return (
         <div className={styles.row}>
@@ -23,7 +25,7 @@ function Card(props) {
                     <div className={styles.data}>
                         <div className={styles.content}>
                             <span className={styles.author}>{props.author}</span>
-                            <h1 className={styles.title}><a href="#">{props.title}</a></h1>
+                            <h1 className={styles.title}><Link to={`/publicacoes/${props.url_title}`}>{props.title}</Link></h1>
                             <p className={styles.text} dangerouslySetInnerHTML={{ __html: props.description }}></p>
                             <a href="#" className={styles.button}>Leia mais</a>
                         </div>

@@ -21,9 +21,9 @@ function Navbar() {
                 </Link>
 
                 <div className={styles.partners}>
-                    <img src={require('../../images/marca-branco-ufpel.png')} alt='UFPEL' />
-                    <img src={require('../../images/marca- horizontal-branco-furg.png')} alt='FURG' />
-                    <img src={require('../../images/marca-branco-furg.png')} alt='Reppets' />
+                    <a href="https://www.ufpel.edu.br/" target="_blank"><img src={require('../../images/marca-branco-ufpel.png')} alt='UFPEL' /></a>
+                    <a href="https://www.furg.br/" target="_blank"><img src={require('../../images/marca- horizontal-branco-furg.png')} alt='FURG' /></a>
+                    <a href="https://www.facebook.com/reppetsufpel" target="_blank"><img src={require('../../images/marca-branco-furg.png')} alt='Reppets' /></a>
                 </div>
             </div>
             <div className={styles.topbar_secondary}>
