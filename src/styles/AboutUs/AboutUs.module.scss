@@ -6,9 +6,28 @@
     text-align: justify;
 }
 
+.section_pub {
+    margin: 8rem auto 3rem auto;
+    max-width: 64rem;
+}
+
 .text {
     position: relative;
     width: 50%;
+}
+
+.more_details {
+    margin-right: 1rem;
+    text-align: right;
+
+    a {
+        color: #32a84a;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
 .image {

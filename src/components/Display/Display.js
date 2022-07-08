@@ -5,12 +5,14 @@ import Card from '../Card/Card';
 
 import Api from '../../api/Api';
 
-function Display() {
+function Display(props) {
+
+    console.log(props.qtd)
 
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        Api.get('/posts/*/4')
+        Api.get('/posts/*/' + props.qtd)
             .then((res) => {
                 console.log(res)
                 setPosts(res.data.posts)

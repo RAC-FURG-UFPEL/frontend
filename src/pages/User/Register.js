@@ -78,7 +78,7 @@ const Register = () => {
                         firstName: "Jane",
                         lastName: "Doe",
                         birthDate: "2022-05-28T21:56:49.906Z",
-                        cpf: "484155582851",
+                        cpf: "4841555828551",
                         title: "Graduando",
                         university: "UFPel"
                     }),
