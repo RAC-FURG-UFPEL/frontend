@@ -17,12 +17,12 @@ function Articles() {
     useEffect(() => {
         setTimeout(() => {
             Api.get('/posts/')
-            .then((res) => {
-                console.log(res)
-                setPosts(res.data.posts)
-                setRemoveLoader(true)
-            })
-            .catch((err) => console.log(err))
+                .then((res) => {
+                    console.log(res)
+                    setPosts(res.data.posts)
+                    setRemoveLoader(true)
+                })
+                .catch((err) => console.log(err))
         }, 500)
     }, [])
 
@@ -31,12 +31,14 @@ function Articles() {
         <div className={styles.container}>
 
             <CheckRole allowedRole="11">
-                <div className={styles.admin_buttons}>
-                    <Link to="/admin/nova-publicacao">
-                        <button className={buttons.button_principal}>Nova publicação</button>
-                    </Link>
-                </div>
+
             </CheckRole>
+
+            <div className={styles.admin_buttons}>
+                <Link to="/admin/nova-publicacao">
+                    <button className={buttons.button_principal}>Nova publicação</button>
+                </Link>
+            </div>
 
             <div className={styles.wrapper}>
                 {posts.length > 0 && posts.map((post) => (
@@ -56,7 +58,6 @@ function Articles() {
                                     <div>
                                         <h1>{post.title}</h1>
                                         <p>{post.description}</p>
-                                        <p>{post.content}</p>
                                     </div>
                                 </Link>
                                 <Link to="/sobre-nos/equipe">

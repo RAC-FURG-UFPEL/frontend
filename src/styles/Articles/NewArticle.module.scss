@@ -16,10 +16,6 @@ button, input[type="submit"], input[type="reset"] {
     h1 {
         margin-bottom: 0.5em;
     }
-
-    p {
-        color: aquamarine;
-    }
 }
 
 .fields {
@@ -29,7 +25,11 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .field_editor {
-    padding: 4rem;
+    width: 100%;
+    height: 100%;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
 }
 
 .form__label {

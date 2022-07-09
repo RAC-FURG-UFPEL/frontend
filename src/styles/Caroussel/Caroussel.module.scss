@@ -34,6 +34,10 @@
     }
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 @keyframes snap {
     96% {
         scroll-snap-align: center;

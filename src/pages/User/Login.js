@@ -47,7 +47,7 @@ const Login = () => {
             )
 
             console.log(JSON.stringify(response?.data))
-            const token = response?.data?.token
+            const token = response?.data?.accessToken
             const roles = response?.data?.roles
             const data = response?.data?.user
             setAuth({ user, data, roles, token })

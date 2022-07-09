@@ -31,6 +31,7 @@ function Display(props) {
                                 key={post._id}
                                 img="https://cdn.create.vista.com/api/media/medium/179826100/stock-photo-background-made-pastel-colors-papers?token="
                                 title={post.title}
+                                url_title={post.url_title}
                                 author={post.author.firstName}
                                 description={post.description}
                             />

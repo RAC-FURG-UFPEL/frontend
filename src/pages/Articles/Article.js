@@ -42,9 +42,9 @@ function Article() {
                     </div>
 
                     <div className={styles.section}>
-                        <div className={styles.text}>
-                            {post.content}
-                        </div>
+                        <section className={styles.text} dangerouslySetInnerHTML={{ __html: post.content }}>
+
+                        </section>
                     </div>
 
                 </Fragment>

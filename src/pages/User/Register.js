@@ -24,13 +24,10 @@ const Register = () => {
     const [userFocus, setUserFocus] = useState(false)
 
     const [name, setName] = useState('')
-    const [nameFocus, setNameFocus] = useState(false)
 
     const [lname, setLname] = useState('')
-    const [lnameFocus, setLnameFocus] = useState(false)
 
     const [cpf, setCpf] = useState('')
-    const [cpfFocus, setCpfFocus] = useState(false)
 
     const [pwd, setPwd] = useState('')
     const [validPwd, setValidPwd] = useState(false)
@@ -91,8 +88,6 @@ const Register = () => {
         }
 
         try {
-
-            console.log("CARALHO", name, lname, cpf)
 
             const response = await Api.post(REGISTER_URL,
                 JSON.stringify(
@@ -189,8 +184,6 @@ const Register = () => {
                                             autoComplete="off"
                                             onChange={(e) => setName(e.target.value)}
                                             required
-                                            onFocus={() => setNameFocus(true)}
-                                            onBlur={() => setNameFocus(false)}
                                         />
                                     </div>
 
@@ -207,8 +200,6 @@ const Register = () => {
                                             autoComplete="off"
                                             onChange={(e) => setLname(e.target.value)}
                                             required
-                                            onFocus={() => setLnameFocus(true)}
-                                            onBlur={() => setLnameFocus(false)}
                                         />
                                     </div>
 
@@ -225,8 +216,6 @@ const Register = () => {
                                             autoComplete="off"
                                             onChange={(e) => setCpf(e.target.value)}
                                             required
-                                            onFocus={() => setCpfFocus(true)}
-                                            onBlur={() => setCpfFocus(false)}
                                         />
                                     </div>
 
