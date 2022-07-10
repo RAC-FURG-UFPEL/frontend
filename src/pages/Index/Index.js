@@ -6,6 +6,8 @@ import AboutUs from '../AboutUs/AboutUs';
 import Team from '../AboutUs/Team';
 import Articles from '../Articles/Articles';
 import Article from '../Articles/Article';
+import Lectures from '../Lectures/Lectures';
+
 import Unauthorized from '../Default/Unauthorized';
 import NotFound from '../Default/NotFound';
 
@@ -21,6 +23,7 @@ function Index() {
                 <Route exact path="/" element={<Home />} />
                 <Route path="/sobre-nos" element={<AboutUs />} />
                 <Route path="/sobre-nos/equipe" element={<Team />} />
+                <Route path="/palestras" element={<Lectures />} />
 
                 <Route path="/publicacoes" element={<Articles />} />
                 <Route

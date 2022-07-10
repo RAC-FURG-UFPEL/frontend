@@ -9,6 +9,13 @@
 .section_pub {
     margin: 8rem auto 3rem auto;
     max-width: 64rem;
+    
+    transition: 0.4s;
+    opacity: 0.5;
+
+    &:hover{
+        opacity: 1;
+    }
 }
 
 .text {

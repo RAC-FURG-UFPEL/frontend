@@ -1,6 +1,7 @@
 import styles from '../../styles/NextLecture/NextLecture.module.scss'
 import { TbCertificate } from 'react-icons/tb'
 import { BsCalendar2Event, BsClock } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 function NextLecture() {
 
@@ -48,14 +49,14 @@ function NextLecture() {
                                     <p>Para mais detalhes, veja nossa página de inscrição!</p>
                                 </div>
                                 <div className={styles.price}>
-                                    
+
                                 </div>
                                 <div className={styles.location}>
                                     Remoto
                                 </div>
-                                <label htmlFor="card1" className={`${styles.button} ${styles.return}`} aria-hidden="true">
+                                <Link to="/palestras" className={`${styles.button} ${styles.return}`}><label htmlFor="card1" aria-hidden="true">
                                     Inscreva-se!
-                                </label>
+                                </label></Link>
                             </div>
                         </div>
                     </div>

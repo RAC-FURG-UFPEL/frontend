@@ -15,10 +15,10 @@ function Admin() {
             </Route>
 
             {/* Regular Admins */}
-            {/*<Route element={<RequireAuth allowedRole={[11]} />}> */}
+            <Route element={<RequireAuth allowedRole={[15]} />}>
                 <Route exact path="/" element={<Dashboard />} />
                 <Route path="/nova-publicacao" element={<NewArticle />} />
-            {/*</Route> */}
+            </Route>
 
             {/* Senior Admins */}
             <Route element={<RequireAuth allowedRole={[12]} />}>
